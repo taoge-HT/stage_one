@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        canvas {
+            margin: 50px 40px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400">1111</canvas>
+
+
+    <script>
+        var canvas = document.querySelector("canvas");
+        var size = 10;
+
+        var canvasWidth = canvas.width;
+        var vanvasHeight = canvas.height;
+
+        var xnum = vanvasHeight / size;
+        var ynum = canvasWidth / size;
+
+        var ctx = canvas.getContext("2d");
+
+        // ctx.moveTo (0, 10);
+        // ctx.lineTo (600, 10);
+        // ctx.stroke();
+
+
+
+        for(var i = 1; i < xnum; i++) {
+            ctx.moveTo( 0, size*i );
+            ctx.lineTo( canvasWidth, size*i );
+        }
+        for(var j = 1; j < ynum; j++) {
+            ctx.moveTo( size*j-0.5, 0 );
+            ctx.lineTo( size*j-0.5, vanvasHeight); 
+        }
+        ctx.strokeStyle = "#ccc"
+        ctx.stroke();
+
+
+        //原点坐标 20，380    y轴顶部坐标 20，30   x轴顶部坐标  570，380
+        // y
+        ctx.beginPath();
+        ctx.moveTo(20, 380);
+        ctx.lineTo(20, 30);
+        ctx.strokeStyle = "#000"
+        ctx.stroke();
+
+        // 三角
+        ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.lineTo(15, 30);
+        ctx.lineTo(25, 30);
+        ctx.closePath();
+        ctx.fill();
+
+
+        // x
+        ctx.beginPath();
+        ctx.moveTo(20, 380);
+        ctx.lineTo(570, 380);
+        ctx.strokeStyle = "#000"
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(580, 380);
+        ctx.lineTo(570, 375);
+        ctx.lineTo(570, 385);
+        ctx.closePath();
+        ctx.fill();
+
+
+
+        // 第一条线
+        ctx.beginPath();
+        ctx.moveTo(20, 380);
+        ctx.lineTo(120, 100);
+        ctx.strokeStyle = "#000"
+        ctx.stroke();
+
+        // 第一个点
+        ctx.beginPath();
+        ctx.moveTo(130, 90);
+        ctx.lineTo(120, 90);
+        ctx.lineTo(120, 100);
+        ctx.lineTo(130, 100);
+        ctx.closePath();
+        ctx.fill();
+
+        // 第二条线
+        ctx.beginPath();
+        ctx.moveTo(130, 100);
+        ctx.lineTo(160, 200);
+        ctx.stroke();
+
+        // 第二个点   
+        ctx.beginPath();
+        ctx.moveTo(160, 200);
+        ctx.lineTo(170, 200);
+        ctx.lineTo(170, 210);
+        ctx.lineTo(160, 210);
+        ctx.closePath();
+        ctx.fill();
+
+
+        // 第三条线
+        ctx.beginPath();
+        ctx.moveTo(170, 205);
+        ctx.lineTo(300, 205);
+        ctx.stroke();
+
+        // 第三个点   
+        ctx.beginPath();
+        ctx.moveTo(300, 200);
+        ctx.lineTo(310, 200);
+        ctx.lineTo(310, 210);
+        ctx.lineTo(300, 210);
+        ctx.closePath();
+        ctx.fill();
+
+
+        // 第四条线
+        ctx.beginPath();
+        ctx.moveTo(310, 200);
+        ctx.lineTo(340, 100);
+        ctx.stroke();
+
+        // 第四个点
+        ctx.beginPath();
+        ctx.moveTo(340, 100);
+        ctx.lineTo(350, 100);
+        ctx.lineTo(350, 90);
+        ctx.lineTo(340, 90);
+        ctx.closePath();
+        ctx.fill();
+
+
+
+          // 第五条线
+        ctx.beginPath();
+        ctx.moveTo(350, 100);
+        ctx.lineTo(450, 380);
+        ctx.stroke();
+
+
+
+        // lefteyes
+        ctx.beginPath();
+        ctx.moveTo(130, 240);
+        ctx.lineTo(130, 270);
+        ctx.lineTo(160, 270);
+        ctx.lineTo(160, 240);
+        ctx.closePath();
+        ctx.fill();
+        // ctx.stroke();
+
+        // righteyes
+        ctx.beginPath();
+        ctx.moveTo(310, 240);
+        ctx.lineTo(310, 270);
+        ctx.lineTo(340, 270);
+        ctx.lineTo(340, 240);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(250, 330);
+        ctx.lineTo(220, 330);
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.moveTo(240, 340);
+        ctx.lineTo(240, 360);
+        ctx.stroke();
+
+
+
+        // 杯子
+        ctx.beginPath();
+        ctx.moveTo(500, 380);
+        ctx.lineTo(500, 370);
+        ctx.lineTo(560, 370);
+        ctx.lineTo(560, 380);
+     
+        ctx.closePath();
+        ctx.fill();
+
+
+        ctx.beginPath();
+        ctx.moveTo(500, 380);
+        ctx.lineTo(500, 310);
+        ctx.lineTo(490, 310);
+        ctx.lineTo(490, 380);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(560, 380);
+        ctx.lineTo(560, 310);
+        ctx.lineTo(570, 310);
+        ctx.lineTo(570, 380);
+        ctx.closePath();
+        ctx.fill();
+
+
+
+        ctx.beginPath();
+        ctx.moveTo(430, 330);
+        ctx.lineTo(470, 250);
+        ctx.lineTo(450, 200);
+        ctx.lineTo(500, 160);
+        ctx.stroke();
+
+        // 425, 320
+        // 430, 330
+
+
+        ctx.beginPath();
+        ctx.moveTo(430, 330);
+        ctx.lineTo(500, 250);
+        ctx.lineTo(480, 220);
+        ctx.lineTo(500, 160);
+        ctx.stroke();
+    </script>
+</body>
+</html>
